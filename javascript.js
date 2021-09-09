@@ -1,0 +1,1 @@
+document.getElementById("target").innerHTML = String(window.innerWidth);
