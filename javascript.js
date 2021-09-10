@@ -14,7 +14,8 @@ function report(mess, lowpri) {
 }
 var lowpri = 0;
 function repping() {
-	document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri++;
+	lowpri+=10;
+	document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri;
 }
 
 
