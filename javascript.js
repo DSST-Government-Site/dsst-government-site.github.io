@@ -7,9 +7,9 @@ function onWindowResise() {
 	report("Updated!")
 }
 window.onresize = onWindowResise;
-consbjnk = document.getElementById("consolebutjank")
+//consbjnk = document.getElementById("consolebutjank")
 function report(mess) {
-	consbjnk.innerHTML += mess+"\n";
+	document.getElementById("consolebutjank").innerHTML += mess+"\n";
 }
 
 
