@@ -4,11 +4,17 @@ function updateWinWid() {
 
 function onWindowResise() {
 	document.getElementById("target").innerHTML = String(window.innerWidth);
+	report("Updated!")
 }
 window.onresize = onWindowResise;
 
 
 window.onload = (event) => {
 	onWindowResise();
-	console.log('page is fully loaded');
-};
+	report('page is fully loaded');
+}
+
+consbjnk = document.getElementById("consolebutjank").innerHTML
+function report(mess) {
+	consbjnk += mess+"\n";
+}
