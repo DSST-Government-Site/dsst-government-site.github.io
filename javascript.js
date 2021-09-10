@@ -1,5 +1,5 @@
 function updateWinWid() {
-	document.getElementById("target").innerHTML = "just kidding it actually updates automatically";
+	document.getElementById("target").innerHTML = "just kidding it actually updates automatically also test 4";
 }
 function onWindowResise() {
 	document.getElementById("target").innerHTML = String(window.innerWidth);
