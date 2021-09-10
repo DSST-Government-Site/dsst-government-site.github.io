@@ -4,6 +4,7 @@ function updateWinWid() {
 function onWindowResise() {
 	
 	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
+	lowpri++
 	report("", 1)
 }
 window.onresize = onWindowResise;
