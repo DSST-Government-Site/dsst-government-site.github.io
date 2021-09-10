@@ -4,16 +4,20 @@ function updateWinWid() {
 function onWindowResise() {
 	
 	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
-	report("Updated!")
+	report("", 1)
 }
 window.onresize = onWindowResise;
-//consbjnk = document.getElementById("consolebutjank")
-function report(mess) {
-	document.getElementById("consolebutjank").innerHTML = document.getElementById("consolebutjank").innerHTML+mess+"\n";
+
+var lowpri;
+function report(mess, lowpri) {
+	if (lowpri == null) {
+		document.getElementById("consolebutjank").innerHTML = document.getElementById("consolebutjank").innerHTML+mess+"\n";
+	} else {document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri;}
 }
 
 
 window.onload = (event) => {
+	lowpri = 0
 	onWindowResise();
 	report('page is fully loaded');
 }
