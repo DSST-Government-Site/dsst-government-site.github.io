@@ -3,13 +3,13 @@ function updateWinWid() {
 }
 function onWindowResise() {
 	
-	document.getElementById("target").innerHTML = String(window.innerWidth);
+	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
 	report("Updated!")
 }
 window.onresize = onWindowResise;
-consbjnk = document.getElementById("consolebutjank").innerHTML
+consbjnk = document.getElementById("consolebutjank")
 function report(mess) {
-	consbjnk += mess+"\n";
+	consbjnk.innerHTML += mess+"\n";
 }
 
 
