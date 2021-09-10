@@ -4,8 +4,9 @@ function updateWinWid() {
 function onWindowResise() {
 	
 	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
-	lowpri++
-	report("", 1)
+	lowpri++;
+	report("", 1);
+	report("actually both");
 }
 window.onresize = onWindowResise;
 
@@ -18,7 +19,7 @@ function report(mess, lowpri) {
 
 
 window.onload = (event) => {
-	lowpri = 0
+	lowpri = 0;
 	onWindowResise();
 	report('page is fully loaded');
 }
