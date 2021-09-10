@@ -8,7 +8,7 @@ function onWindowResise() {
 window.onresize = onWindowResise;
 consbjnk = document.getElementById("consolebutjank").innerHTML
 function report(mess) {
-	consbjnk += mess+"\n";
+	consbjnk += mess+"<br>";
 }
 
 
