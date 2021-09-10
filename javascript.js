@@ -4,17 +4,17 @@ function updateWinWid() {
 function onWindowResise() {
 	
 	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
-	lowpri++;
-	report("", "low");
+	repping();
 	report("actually both");
 }
 window.onresize = onWindowResise;
 
-var lowpri;
 function report(mess, lowpri) {
-	if (lowpri == "low") {
-		document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri;
-	} else {document.getElementById("consolebutjank").innerHTML = document.getElementById("consolebutjank").innerHTML+mess+"\n";}
+	document.getElementById("consolebutjank").innerHTML = document.getElementById("consolebutjank").innerHTML+mess+"\n";
+}
+var lowpri = 0;
+function repping() {
+	document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri++;
 }
 
 
