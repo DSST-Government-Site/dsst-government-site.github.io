@@ -2,10 +2,10 @@ function updateWinWid() {
 	document.getElementById("target").innerHTML = "just kidding it actually updates automatically";
 }
 function onWindowResise() {
-	
-	document.getElementById("target").innerHTML = String(Math.min(window.innerWidth, window.innerHeight));
+	document.getElementById("main-block").style.max-width = window.innerHeight;
+	document.getElementById("target").innerHTML = String(window.innerHeight);
 	repping();
-	report("actually both");
+	//report("actually both");
 }
 window.onresize = onWindowResise;
 

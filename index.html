@@ -8,16 +8,24 @@
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		width: 50%;
+		width: 100%;
 	}
 	.newlineworks {
 		white-space: pre-wrap;
 	}
+	div.main-block {
+		max-width: 500px;
+		margin: auto;
+		border: 3px solid #FFEEEE;
+	}
 	</style>
 </head>
 <body>
-	<img src="./image/branches.jpg" class="center">
 	<button onclick="updateWinWid()">Update the window width</button>
+	<div class="main-block" id="main-block">
+		<img src="./image/branches.jpg" class="center">
+		<p>internal text test</p>
+	</div>
 	<p id="target">test part 6</p>
 	<p id="conupdbutjank"></p>
 	<p id="consolebutjank" class="newlineworks"></p>
