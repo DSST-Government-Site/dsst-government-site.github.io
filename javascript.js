@@ -2,7 +2,7 @@ function updateWinWid() {
 	document.getElementById("target").innerHTML = "just kidding it actually updates automatically";
 }
 function onWindowResise() {
-	document.getElementById("main-block").style.max-width = window.innerHeight;
+	document.getElementById("main-block").style["max-width"] = window.innerHeight;
 	document.getElementById("target").innerHTML = String(window.innerHeight);
 	repping();
 	//report("actually both");
