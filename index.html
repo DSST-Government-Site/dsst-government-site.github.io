@@ -20,10 +20,15 @@
 	}
 	div.search-bar {
 		float: right;
-		border: 1px solid black;
-		border-collapse: collapse;
-		border-radius: 3px;
+		
 	}
+	div.search-bar-button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 	table, th, td {
 		border: 1px solid black;
 		border-collapse: collapse;
@@ -36,7 +41,7 @@
 		<div class="search-bar">
 			<form onsubmit="myFunction()">
 			<input type="text" id="search-query">
-			<input type="image" src="./image/search_button.png" alt="Search" width="20" height="20">
+			<input type="image" src="./image/search_button.png" alt="Search" width="20" height="20" class="search-bar-button">
 			</form>
 		</div>
 		<img src="./image/branches.png" class="center">
