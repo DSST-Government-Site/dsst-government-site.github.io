@@ -18,6 +18,12 @@
 		margin: auto;
 		border: 3px solid #FFEEEE;
 	}
+	div.search-bar {
+		position: absolute;
+		right: 10px;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
 	table, th, td {
 		border: 1px solid black;
 		border-collapse: collapse;
@@ -27,11 +33,12 @@
 <body>
 	<!--<button onclick="updateWinWid()">Update the window width</button>-->
 	<div class="def-main-block" id="main-block">
+		<div class="search-bar"><p>Search (display only)</p></div>
 		<img src="./image/branches.png" class="center">
 		<table style="width:100%">
 			<tr>
 				<th style="width:33%">Legislative</th>
-				<th style="width:34%">Executive</th>
+				<th>Executive</th>
 				<th style="width:33%">Judicial</th>
 			</tr>
 			<tr>
