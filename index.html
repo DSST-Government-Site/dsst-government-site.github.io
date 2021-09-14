@@ -20,6 +20,9 @@
 	}
 	div.search-bar {
 		float: right;
+		border: 1px solid black;
+		border-collapse: collapse;
+		border-radius: 3px;
 	}
 	table, th, td {
 		border: 1px solid black;
@@ -30,7 +33,12 @@
 <body>
 	<!--<button onclick="updateWinWid()">Update the window width</button>-->
 	<div class="def-main-block" id="main-block">
-		<div class="search-bar"><p>Search (display only)</p></div>
+		<div class="search-bar">
+			<form onsubmit="myFunction()">
+			<input type="text" id="search-query">
+			<input type="image" src="./image/search_button.png" alt="Search" width="20" height="20">
+			</form>
+		</div>
 		<img src="./image/branches.png" class="center">
 		<table style="width:100%">
 			<tr>
