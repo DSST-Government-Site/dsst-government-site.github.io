@@ -1,50 +1,50 @@
 <html>
 
+
+
 <head>
 	<title>DSST Byers</title>
 	<script src="./javascript.js"></script>
 	<style>
-	.center {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-	}
-	.newlineworks {
-		white-space: pre-wrap;
-	}
-	div.def-main-block {
-		max-width: 100px;
-		margin: auto;
-		border: 3px solid #FFEEEE;
-	}
-	div.search-bar {
-		float: right;
-		
-	}
-	div.search-bar-button {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-	table, th, td {
-		border: 1px solid black;
-		border-collapse: collapse;
-	}
+		/* 		body {
+			background-color: #FAFAFA;
+		} */
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+
+		.newlineworks {
+			white-space: pre-wrap;
+		}
+
+		div.def-main-block {
+			max-width: 100px;
+			margin: auto;
+			padding: 10px;
+			border: 3px solid #F5F5F5;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
 	</style>
 </head>
+
+
+
 <body>
-	<!--<button onclick="updateWinWid()">Update the window width</button>-->
 	<div class="def-main-block" id="main-block">
-		<div class="search-bar">
-			<form onsubmit="myFunction()">
-			<input type="text" id="search-query">
-			<input type="image" src="./image/search_button.png" alt="Search" width="20" height="20" class="search-bar-button">
-			</form>
+		<div class="search-bar" style="float: right;">
+			<input type="text" style="" autocomplete="off" id="search-query">
+			<button type="button" onclick="activateSearch()" style="float:right">Search</button>
 		</div>
-		<img src="./image/branches.png" class="center">
+		<img src="./branches.png" class="center">
 		<table style="width:100%">
 			<tr>
 				<th style="width:33%">Legislative</th>
@@ -53,16 +53,15 @@
 			</tr>
 			<tr>
 				<td colspan="3">
-					<p>deep internal contents</p>
+					<div style="min-height:200px; padding: 10px;">
+						<p>deep internal contents</p>
+					</div>
 				</td>
 			</tr>
 		</table>
-		<p>internal text test</p>
-		<p>another test</p>
 	</div>
-	<p id="target">test part 9</p>
-	<p id="conupdbutjank">Low Priority Pings: 0</p>
-	<p id="consolebutjank" class="newlineworks"></p>
 </body>
+
+
 
 </html>

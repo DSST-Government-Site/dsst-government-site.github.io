@@ -1,23 +1,13 @@
-function updateWinWid() {
-	document.getElementById("target").innerHTML = "just kidding it actually updates automatically";
-}
 function onWindowResise() {
-	document.getElementById("main-block").style["max-width"] = window.innerHeight*1.25;
+	mblock = document.getElementById("main-block")
+	mblock.style["max-width"] = window.innerHeight*1.25;
 	document.getElementById("target").innerHTML = String(window.innerHeight);
-	repping();
-	//report("actually both");
 }
 window.onresize = onWindowResise;
 
-function report(mess, lowpri) {
-	document.getElementById("consolebutjank").innerHTML = document.getElementById("consolebutjank").innerHTML+mess+"\n";
+function activateSearch(imnp) {
+	alert(document.getElementById("search-query").value)
 }
-var lowpri = 0;
-function repping() {
-	lowpri++;
-	document.getElementById("conupdbutjank").innerHTML = "Low Priority Pings: " + lowpri;
-}
-
 
 window.onload = (event) => {
 	//lowpri = 0;
