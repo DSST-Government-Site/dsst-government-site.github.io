@@ -26,11 +26,22 @@
 			padding: 10px;
 			border: 3px solid #F5F5F5;
 		}
-
+		button.dropdown {
+			border-radius: 2px;
+			background-color: #F5F5F5;
+			border: 1px solid black;
+			height: 40px;
+			width: 100%;
+			transition-duration: 0.1s;
+		}
+		button.dropdown:hover {
+			background-color: #E9E9E9;
+		}
+		
 		table,
 		th,
 		td {
-			border: 1px solid black;
+			border: 1px solid #F5F5F5;
 			border-collapse: collapse;
 		}
 	</style>
@@ -40,21 +51,25 @@
 
 <body>
 	<div class="def-main-block" id="main-block">
-		<div class="search-bar" style="float: right;">
+		<div class="search-bar" style="float:right;">
 			<input type="text" style="" autocomplete="off" id="search-query">
 			<button type="button" id="search-button" onclick="activateSearch()" style="float:right">Search</button>
 		</div>
-		<img src="./image/branches.png" class="center">
 		<table style="width:100%">
 			<tr>
-				<th style="width:33%">Legislative</th>
-				<th>Executive</th>
-				<th style="width:33%">Judicial</th>
+				<th style="width:33%"><img src="./image/br_leg.png" class="center"></th>
+				<th><img src="./image/br_exe.png" class="center"></th>
+				<th style="width:33%"><img src="./image/br_jud.png" class="center"></th>
+			</tr>
+			<tr>
+				<th style="width:33%"><button class="dropdown">Legislative</button></th>
+				<th><button class="dropdown">Executive</button></th>
+				<th style="width:33%"><button class="dropdown">Judicial</button></th>
 			</tr>
 			<tr>
 				<td colspan="3">
 					<div style="min-height:200px; padding: 10px;" id="main-text">
-						<p>deep internal contents</p>
+						<p style="color:#E9E9E9">Click one of the dropdown buttons (;</p>
 					</div>
 				</td>
 			</tr>
