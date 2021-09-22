@@ -1,3 +1,8 @@
+var jsdata = 5;
+fetch(new Request("./data.json"))
+.then(response => response.json())
+.then(data => {jsdata = data});
+
 window.onload = (event) => {
 	document.getElementById("search-query").addEventListener("keyup", function(event) {
 		if (event.keyCode === 13) {
@@ -18,4 +23,8 @@ window.onresize = onWindowResise;
 
 function activateSearch(imnp) {
 	alert(document.getElementById("search-query").value)
+}
+
+function dropdownButtonClick(drpbt) {
+	document.getElementById("main-text").innerText = jsdata[drpbt];
 }
