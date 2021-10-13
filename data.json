@@ -1,5 +1,5 @@
 {
-	"exec":"Executive Content",
-	"legi":"Legislative Content",
-	"judi":"Judicial Content"
+	"legi":"Congress:!b  House of Representatives!b  Senate",
+	"exec":"President",
+	"judi":"Federal Courts"
 }

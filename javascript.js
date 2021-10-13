@@ -1,6 +1,6 @@
 var jsdata = 5;
 fetch(new Request("./data.json"))
-.then(response => response.json())
+.then(data => data.json())
 .then(data => {jsdata = data});
 
 window.onload = (event) => {
@@ -21,10 +21,23 @@ function onWindowResise() {
 }
 window.onresize = onWindowResise;
 
+
+
+function parseData(intext) {
+	block = "";
+	i=0;
+	while ((next=intext.indexOf("!b", i))!=-1) {
+		block+=(intext.slice(i,next) + "\n");
+		i=next+2;
+	}
+	block+=(intext.slice(i));
+	return block;
+}
+
 function activateSearch(imnp) {
 	alert(document.getElementById("search-query").value)
 }
 
 function dropdownButtonClick(drpbt) {
-	document.getElementById("main-text").innerText = jsdata[drpbt];
+	document.getElementById("main-text").innerHTML = parseData(jsdata[drpbt]);
 }
