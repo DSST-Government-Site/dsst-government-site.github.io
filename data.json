@@ -1,5 +1,5 @@
 {
-	"legi":"Congress:!b  House of Representatives!b  Senate",
-	"exec":"President",
-	"judi":"Federal Courts"
+	"legi":"<body><p>Congress:</p><ul><li>House of Representatives</li><li>Senate</li></ul><table><tr><th>a</th><th>b</th><th>c</th><tr><th>d</th><th>e</th><th>f</th></tr></table></body>",
+	"exec":"<body><p>President</p></body>",
+	"judi":"<body><p>Federal Courts</p></body>"
 }
