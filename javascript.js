@@ -18,7 +18,7 @@ window.onload = (event) => {
 
 function onWindowResise() {
 	mblock.style["max-width"] = window.innerHeight * 1.25;
-	//document.getElementById("main-text").style["min-height"] = window.innerHeight
+	//document.getElementById("main-text").style["min-height"] = window.innerHeight 
 }
 window.onresize = onWindowResise;
 
