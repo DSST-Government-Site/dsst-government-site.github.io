@@ -1,5 +1,5 @@
 {
-	"legi":"<body><p>Congress:</p><ul><li>House of Representatives</li><li>Senate</li></ul><table><tr><th>a</th><th>b</th><th>c</th><tr><th>d</th><th>e</th><th>f</th></tr></table></body>",
-	"exec":"<body><p>President</p></body>",
-	"judi":"<body><p>Federal Courts</p></body>"
+	"legi":"<body><p>leg</p></body>",
+	"exec":"<body><p>Governers</p></body>",
+	"judi":"<body><p>Court of Ice</p><p>Court of Fire</p><p>Court of Candy</p><p>Court of Silme</p></body>"
 }
