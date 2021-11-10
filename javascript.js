@@ -13,8 +13,6 @@ window.onload = (event) => {
 	});
 	mblock = document.getElementById("main-block");
 	onWindowResise();
-	
-	//replaceDropdown();
 }
 
 function replaceDropdown() {
