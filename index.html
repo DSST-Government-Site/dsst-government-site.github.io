@@ -25,7 +25,6 @@
 			max-width: 100px;
 			margin: auto;
 			padding: 10px;
-			border: 3px solid #F5F5F5;
 		}
 		button.dropdown {
 			border-radius: 2px;
@@ -42,8 +41,11 @@
 		table,
 		th,
 		td {
-			border: 1px solid #F5F5F5;
+			border: 1px solid #FFFFFF;
 			border-collapse: collapse;
+		}
+		br {
+			line-height: 1.0;
 		}
 	</style>
 </head>
@@ -52,25 +54,25 @@
 
 <body>
 	<div class="def-main-block" id="main-block">
-		<div class="search-bar" style="float:left;">
+		<div class="search-bar" style="float:left">
 			<input type="text" style="" autocomplete="off" id="search-query">
 			<button type="button" id="search-button" onclick="activateSearch()" style="float:left">Search</button>
 		</div>
 		<table style="width:100%">
 			<tr>
-				<th style="width:33%"><img src="./image/br_leg.png" class="center"></th>
-				<th><img src="./image/br_exe.png" class="center"></th>
-				<th style="width:33%"><img src="./image/br_jud.png" class="center"></th>
+				<th style="width:33%"><img src="./br_leg.png" class="center"></th>
+				<th><img src="./br_exe.png" class="center"></th>
+				<th style="width:33%"><img src="./br_jud.png" class="center"></th>
 			</tr>
 			<tr>
-				<th style="width:33%"><button class="dropdown" onclick="dropdownButtonClick('legi')">Legislative</button></th>
-				<th>									<button class="dropdown" onclick="dropdownButtonClick('exec')">Executive</button></th>
-				<th style="width:33%"><button class="dropdown" onclick="dropdownButtonClick('judi')">Judicial</button></th>
+				<th style="width:33%"><button class="dropdown" onclick="dropdownButtonClick('legi'); replaceDropdown();">Legislative</button></th>
+				<th>									<button class="dropdown" onclick="dropdownButtonClick('exec'); replaceDropdown();">Executive</button></th>
+				<th style="width:33%"><button class="dropdown" onclick="dropdownButtonClick('judi'); replaceDropdown();">Judicial</button></th>
 			</tr>
 			<tr>
 				<td colspan="3">
-					<div style="min-height:200px; padding: 10px">
-						<div id="main-text" class="newlineworks">
+					<div style="min-height:200px; padding: 0px; margin: 0px">
+						<div id="main-text" style="border: 3px solid #F5F5F5">
 							<p style="color:#E9E9E9">Click one of the dropdown buttons (;</p>
 						</div>
 					</div>

@@ -1,8 +1,12 @@
-var jsdata = 5;
-fetch(new Request("./data.json"))
-.then(data => data.json())
-.then(data => {jsdata = data});
 const parser = new DOMParser();
+var contentdata = 5;
+fetch(new Request("./data.html"))
+.then(data => data.text())
+.then(data => {contentdata = parser.parseFromString(data, "text/html").body});
+var droptempl = 4;
+fetch(new Request("./dropdowntemplate.html"))
+.then(data => data.text())
+.then(data => {droptempl = parser.parseFromString(data, "text/html").body});
 
 window.onload = (event) => {
 	document.getElementById("search-query").addEventListener("keyup", function(event) {
@@ -13,21 +17,45 @@ window.onload = (event) => {
 	});
 	mblock = document.getElementById("main-block");
 	onWindowResise();
-	report('page is fully loaded');
+	
+	//replaceDropdown();
+	//report('page is fully loaded');
+}
+
+function replaceDropdown() {
+	let n = document.getElementById("dropdown");
+	if (n!=null) {
+		let p = n.parentNode;
+		let bu = document.createElement("button");
+		bu.onclick = function() {dropdownToggle(this.nextElementSibling.nextElementSibling.style);};
+		bu.replaceChildren(n.children[0].innerHTML);
+		n.children[0].remove();
+		p.insertBefore(bu, n);
+		p.insertBefore(document.createElement("br"), n);
+		let nt = document.createElement("table");
+		nt.innerHTML = '<tr><th style="padding:2px; border-top: solid 2px black"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black"></th><th style="padding:10px"></th></tr>';
+		nt.style.display = "none";
+		nt.children[0].children[0].children[2].replaceChildren(...n.children);
+		p.insertBefore(nt, n);
+		n.remove();
+		replaceDropdown();
+	}
 }
 
 function onWindowResise() {
 	mblock.style["max-width"] = window.innerHeight * 1.25;
-	//document.getElementById("main-text").style["min-height"] = window.innerHeight 
+	//mblock.style["min-height"] = window.innerHeight*0.75-20;
 }
 window.onresize = onWindowResise;
 
-
+function dropdownToggle(dis) {
+	dis.display = (dis.display=="none")?"block":"none";
+}
 
 function activateSearch(imnp) {
 	alert(document.getElementById("search-query").value)
 }
 
 function dropdownButtonClick(drpbt) {
-	document.getElementById("main-text").replaceChildren(parser.parseFromString(jsdata[drpbt], "text/html").body);
+	document.getElementById("main-text").replaceChildren(contentdata);
 }
