@@ -1,12 +1,8 @@
 const parser = new DOMParser();
 var contentdata = 5;
-fetch(new Request("./data.html"))
+fetch(new Request("./datarename.html"))
 .then(data => data.text())
 .then(data => {contentdata = parser.parseFromString(data, "text/html").body});
-var droptempl = 4;
-fetch(new Request("./dropdowntemplate.html"))
-.then(data => data.text())
-.then(data => {droptempl = parser.parseFromString(data, "text/html").body});
 
 window.onload = (event) => {
 	document.getElementById("search-query").addEventListener("keyup", function(event) {
@@ -31,9 +27,11 @@ function replaceDropdown() {
 		bu.replaceChildren(n.children[0].innerHTML);
 		n.children[0].remove();
 		p.insertBefore(bu, n);
-		p.insertBefore(document.createElement("br"), n);
+		let br = document.createElement("br");
+		p.insertBefore(br, n);
+		p.insertBefore(br, n);
 		let nt = document.createElement("table");
-		nt.innerHTML = '<tr><th style="padding:2px; border-top: solid 2px black"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black"></th><th style="padding:10px"></th></tr>';
+		nt.innerHTML = '<tr align="left"><th style="padding:2px; border-top: solid 2px black"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black"></th><th style="padding:5px"></th></tr>';
 		nt.style.display = "none";
 		nt.children[0].children[0].children[2].replaceChildren(...n.children);
 		p.insertBefore(nt, n);
@@ -58,4 +56,5 @@ function activateSearch(imnp) {
 
 function dropdownButtonClick(drpbt) {
 	document.getElementById("main-text").replaceChildren(contentdata);
+	 replaceDropdown();
 }
