@@ -1,6 +1,6 @@
 const parser = new DOMParser();
 var contentdata = 5;
-fetch(new Request("./datarename.html"))
+fetch(new Request("./data.html"))
 .then(data => data.text())
 .then(data => {contentdata = parser.parseFromString(data, "text/html").body});
 
