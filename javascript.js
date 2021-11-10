@@ -15,7 +15,6 @@ window.onload = (event) => {
 	onWindowResise();
 	
 	//replaceDropdown();
-	//report('page is fully loaded');
 }
 
 function replaceDropdown() {
