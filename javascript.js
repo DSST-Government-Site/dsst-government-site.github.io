@@ -30,7 +30,8 @@ function replaceDropdown() {
 		let br = document.createElement("br");
 		p.insertBefore(br, n);
 		let nt = document.createElement("table");
-		nt.innerHTML = '<tr align="left"><th style="padding:2px; border-top: solid 2px black"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black"></th><th style="padding:5px; font-size:75%;"></th></tr>';
+		nt.innerHTML = '<tr align="left" class="whitetb"><th style="padding:2px; border-top: solid 2px black" class="whitetb"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black" class="whitetb"></th><th style="padding:5px;" class="whitetb"></th></tr>';
+		nt.style = "border: 1px solid #FFFFFF";
 		nt.style.display = "none";
 		nt.children[0].children[0].children[2].replaceChildren(...n.children);
 		p.insertBefore(nt, n);
@@ -54,6 +55,7 @@ function activateSearch(imnp) {
 }
 
 function dropdownButtonClick(drpbt) {
-	document.getElementById("main-text").replaceChildren(contentdata);
+	document.getElementById("main-text").innerHTML = '';
+	document.getElementById("main-text").append(document.importNode(contentdata.children[drpbt], true));
 	 replaceDropdown();
 }
