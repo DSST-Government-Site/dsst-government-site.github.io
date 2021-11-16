@@ -11,11 +11,7 @@ window.onload = (event) => {
 			document.getElementById("search-button").click();
 		}
 	});
-	mblock = document.getElementById("main-block");
 	onWindowResise();
-	
-	//replaceDropdown();
-	//report('page is fully loaded');
 }
 
 function replaceDropdown() {
@@ -30,8 +26,8 @@ function replaceDropdown() {
 		let br = document.createElement("br");
 		p.insertBefore(br, n);
 		let nt = document.createElement("table");
-		nt.innerHTML = '<tr align="left" class="whitetb"><th style="padding:2px; border-top: solid 2px black" class="whitetb"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black" class="whitetb"></th><th style="padding:5px;" class="whitetb"></th></tr>';
-		nt.style = "border: 1px solid #FFFFFF";
+		nt.innerHTML = '<tr align="left" class="whitetb"><th style="padding:2px; border-top: solid 2px black" class="whitetb"></th><th style="padding:2px; border-left: solid 2px black; border-top: solid 2px black" class="whitetb"></th><th style="padding:5px; width:100%;" class="whitetb"></th></tr>';
+		nt.style = "border: 1px solid #FFFFFF; width:100%;";
 		nt.style.display = "none";
 		nt.children[0].children[0].children[2].replaceChildren(...n.children);
 		p.insertBefore(nt, n);
@@ -41,8 +37,7 @@ function replaceDropdown() {
 }
 
 function onWindowResise() {
-	mblock.style["max-width"] = window.innerHeight * 1.25;
-	//mblock.style["min-height"] = window.innerHeight*0.75-20;
+	document.getElementById("main-block").style["max-width"] = window.innerHeight * 1.25;
 }
 window.onresize = onWindowResise;
 
@@ -57,5 +52,5 @@ function activateSearch(imnp) {
 function dropdownButtonClick(drpbt) {
 	document.getElementById("main-text").innerHTML = '';
 	document.getElementById("main-text").append(document.importNode(contentdata.children[drpbt], true));
-	 replaceDropdown();
+	replaceDropdown();
 }
